@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <style>
+        /* http://meyerweb.com/eric/tools/css/reset/   v2.0b1 | 201101  */
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+
+        ins {
+            text-decoration: none;
+        }
+        del {
+            text-decoration: line-through;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        /* END OF ERIC MEYER'S CSS RESET */
+
+        header {
+            background: #aaa;
+            padding: 20px 0;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        footer {
+            margin-top: 50px;
+            background: #3c3c3c;
+            padding: 20px 0;
+            color: #fff;
+        }
+
+        h1 {
+            color: darkblue;
+            font-family: 'Open Sans', sans-serif, monospace;
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-top: 10px;
+            margin-left: 5px;
+            margin-bottom: 20px
+        }
+
+        h2 {
+            color: black;
+            font-family: SansSerif, Arial, Courier, Calibri, monospace;
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-left: 5px;
+            margin-bottom: 12px
+        }
+
+        p {
+            color: black;
+            font-family: Arial, Calibri, SansSerif, monospace;
+            font-weight: normal;
+            font-size: 1em;
+            line-height: 150%;
+            margin-left: 5px;
+            margin-bottom: 30px
+        }
+
+        .container {
+            max-width: 1140px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .navigation {
+            color: white;
+            font-family: Arial, Calibri, SansSerif, monospace;
+            font-weight: normal;
+            font-size:1em;
+            padding: 20px;
+        }
+
+        .row {
+            margin: 2px 0;
+        }
+        .row::after {
+            content:"";
+            display:block;
+            clear:both;
+        }
+
+        .col {
+            float: left;
+            box-sizing: border-box;
+            padding: 0 20px;
+            display: inline-block;
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 24.99%;
+        }
+
+        .col-4 {
+            width: 33.32%;
+        }
+
+        .col-5 {
+            width: 41.65%;
+            background-color: white;
+        }
+
+        .col-6 {
+            width: 49.98%;
+        }
+
+        .col-7 {
+            width: 58.31%;
+        }
+
+        .col-8 {
+            width: 66.64%;
+        }
+
+        .col-9 {
+            width: 74.97%;
+        }
+
+        .col-10 {
+            width: 83.3%;
+        }
+
+        .col-11 {
+            width: 91.63%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+            var name=prompt("Please enter your name: ", "");
+            document.getElementById("visitorname").innerHTML = "Welcome, " + name + "!";
+        }
+    </script>
+    <title>Christopher Carlson's Web Portfolio</title>
+</head>
+<body>
+<header>
+    <div class="container">
+        <nav>
+            <ul><li><a href="http://www.chriscarlsontravels.com/cpst342/index.html" class="navigation">Introduction</a> | <a href="http://www.chriscarlsontravels.com/cpst342/about.html" class="navigation">About the Author</a> | <a class="navigation" href="https://chriscarlson.shutterfly.com/" target=_blank>Additional Photography Works</a> | <a href="https://www.chriscarlsontravels.com/cpst342/contact.html" class="navigation">Contact</a> | <a href="http://www.chriscarlsontravels.com/cpst342/string_generator.html" class="navigation">Generate A String</a></li></ul>
+        </nav>
+    </div>
+</header>
+<div class="container">
+    <main class="row">
+        <div class="row">
+            <section class="col col-5">
+                <h1 id="visitorname"></h1>
+            </section>
+        </div>
+        <div class="row">
+            <section class="col col-2">
+                &nbsp;
+            </section>
+        </div>
+        <section class="col col-8">
+            <h2>Introduction</h2>
+        </section>
+        <section class="col col-5">
+            <p>Welcome to my online portfolio! My name is Christopher Carlson, and I am currently an application administrator and developer for a fortune 500 company. I am currently pursuing a
+                Bachelor's Degree in Information Technology at Loyola University in Chicago, Illinois. I am passionate about web programming and business application development. My resume
+                and portfolio will be posted here soon. In my free time, I enjoy traveling and photography. You can view some of my photography by clicking the About the Author link above.</p>
+        </section>
+        <section class="col col-2">
+            &nbsp;
+        </section>
+        <section class="col col-5">
+            <p>You can browse this site by clicking the navigation links above. Additional content will be posted soon! Feel free to connect with me through the contact information below.
+                <br><br>Thank you,
+                <br><br>Chris Carlson
+                <br>Email: <a href="mailto:ccarlson6@luc.edu">ccarlson6@luc.edu</a>
+            </p>
+        </section>
+    </main>
+</div>
+<footer>
+    <div class="container">
+        <nav>
+            <ul><li><a href="index.html" class="navigation">Introduction</a> | <a href="about.html" class="navigation">About the Author</a></li></ul>
+        </nav>
+    </div>
+</footer>
+</body>
+</html>
+
+
+
+
+
