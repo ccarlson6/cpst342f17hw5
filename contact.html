@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Christopher Carlson's Web Portfolio</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <style>
+        body {
+            padding-top: 5rem;
+        }
+        #map {
+            height: 500px;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            height: 20%;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#"></a>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="http://www.chriscarlsontravels.com/cpst342/index.html">Introduction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://www.chriscarlsontravels.com/cpst342/about.html">About the Author</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://chriscarlson.shutterfly.com/" target=_blank>Additional Photography Works</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="https://www.chriscarlsontravels.com/cpst342/contact.html">Contact<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="http://www.chriscarlsontravels.com/cpst342/string_generator.html">Generate a String</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main role="main" class="container">
+
+    <div class="row">
+        <div>
+            <h1>Christopher Carlson's Web Portfolio</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 col-md-auto">
+            <h2><br>Contact</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-9 col-md">
+            <p><br>Below is our office location and contacts. Please feel free to<br>contact me at any time!</p>
+            <p><strong>Christopher Carlson</strong></p>
+            <p><strong>Address:</strong>
+                <br>440 North Orleans Street
+                <br>Chicago, IL 60610</p>
+            <p><strong>Phone:</strong>&emsp;(999) 888-7777</p>
+            <p><strong>Email:</strong>&emsp;<a href="mailto:ccarlson6@luc.edu" target="_top">ccarlson6@luc.edu</a></p>
+        </div>
+
+        <div class="col-12 col-md">
+            <p>    <script>
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        var latitude = position.coords.latitude;
+                        var longitude = position.coords.longitude;
+                        var userLocation = new google.maps.LatLng(latitude, longitude);
+                        var directionsService = new google.maps.DirectionsService();
+                        var directionsDisplay = new google.maps.DirectionsRenderer();
+                        var mapOptions =
+                            {
+                                zoom: 10,
+                                center: userLocation,
+                                mapTypeControl: true,
+                                navigationControlOptions:
+                                    {
+                                        style: google.maps.NavigationControlStyle.SMALL
+                                    },
+                                mapTypeId: google.maps.MapTypeId.ROADMAP
+                            };
+                        map = new google.maps.Map( document.getElementById("map"),mapOptions);
+                        directionsDisplay.setMap(map);
+                        directionsDisplay.setPanel(document.getElementById('panel'));
+                        var request = {
+                            origin: userLocation,
+                            destination: document.getElementById('endingLocation').value,
+                            travelMode: google.maps.DirectionsTravelMode.DRIVING
+                        };
+
+                        directionsService.route(request, function (response, status) {
+                            if (status == google.maps.DirectionsStatus.OK) {
+                                directionsDisplay.setDirections(response);
+                            }
+                        });
+                    });
+                }
+            </script><input type="hidden" id="endingLocation" value="440 North Orleans Street Chicago, IL">
+                <div id="map"></div>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTsX7m16DajRSous-8EIQbsG09keYBVCk&callback=initMap">
+            </script>
+            </p>
+        </div>
+    </div>
+
+</main>
+
+</body>
+</html>
